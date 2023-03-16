@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d20af72a07.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!--topNavbar start-->
+  <div class="top-navbar">
+    <p>WELCOME</p>
+    <div class="icons">
+      <a href="login.html"><img src="images/register.png" alt="" width="18px">Login</a>
+      <a href="register.html"><img src="images/register.png" alt="" width="18px">Register</a>
+    </div>
+  </div>
+  <hr>
+  <!--topNavbar end -->
+
+  <!--Navbar start-->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="first.html" id="logo"><span id="span1">E</span>-Shopping<span>Shop</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="images/menu.png" alt="" width="30px"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="first.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:white;">
+              <li><a class="dropdown-item" href="#">Smart Phones</a></li>
+              <li><a class="dropdown-item" href="#">Mobile Phones</a></li>
+              <li><a class="dropdown-item" href="#">Cameras</a></li>
+              <li><a class="dropdown-item" href="#">Fridge</a></li>
+              <li><a class="dropdown-item" href="#">Smart Phones</a></li>
+              <li><a class="dropdown-item" href="#">AC</a></li>
+              <li><a class="dropdown-item" href="#">Smart Watches</a></li>
+              <li><a class="dropdown-item" href="#">Headphones</a></li>
+              <li><a class="dropdown-item" href="#">Laptop</a></li>
+              <li><a class="dropdown-item" href="#">Monitor</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" id="search">
+          <input class="form-control me-2" type="search" style="border:1px solid black;" placeholder="Search"
+            aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!--Navbar end-->
+  <header id="header" class="vh-100 carousel slide" style="padding-top: 104px;">
+    <div class="container h-100 d-flex align-item-center carousel-inner ">
+      <div class="text-center carousel-item active">
+        <h2 class="text-capitalize text-white">Best Product</h2>
+        <h1 class="text-uppercase py-2 fw-bold text-white">latest product</h1>
+        <a href="#" class="btn mt-3 text-uppercase">Shop now</a>
+      </div>
+      <div class="text-center carousel-item">
+        <h2 class="text-capitalize text-white">Best price and offers</h2>
+        <h1 class="text-uppercase py-2 fw-bold text-white">Newly Launched</h1>
+        <a href="#" class="btn mt-3 text-uppercase">Buy now</a>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#header" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </header>
+  <!--end of header-->
+
+  <!--all product-->
+  <section id="allproduct" class="py-5">
+    <div class="container">
+      <div class="title text-center">
+        <h2 class="position-relative d-inline-block">Products</h2>
+      </div>
+
+      <div class="row g-0">
+        <div class="d-flex  flex-wrap justify-content-center mt-5  filter-button-group">
+          <button type="button" class="btn m-2 text-dark active-filter-btn" data-filter="*">ALL</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".best">Best Sellers</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".feat">Featured</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".new">Newly Arrival</button>
+        </div>
+
+        <div class="allproduct-list mt-4 row gx-0 gy-3">
+          <div class=" col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="allproduct-img">
+                <img src="images/lcd3.png" class="w-100">
+              </div>
+              <div class="text-center">
+                <p class="text-capitalize my-1">LED TVs</p>
+                <span class="fw-bold">Rs. 00.00</span>
+              </div>
+            </a>
+          </div>
+          <div class=" col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div class="allproduct-img">
+                <img src="images/oven1 (2).png" class="w-100">
+              </div>
+              <div class="text-center">
+                <p class="text-capitalize my-1">MICROWAVE OVENS</p>
+                <span class="fw-bold">Rs. 00.00</span>
+              </div>
+            </a>
+          </div>
+          <div class=" col-md-6 col-lg-4 col-xl-3 p-2 new">
+              <div class="allproduct-img">
+                <img src="images/lapi1.jpg" class="w-100">
+              </div>
+              <div class="text-center">
+                <br>
+                <p class="text-capitalize my-1">LAPTOPS</p>
+                <span class="fw-bold">Rs. 00.00</span>
+              </div>
+            </a>
+          </div>
+          <div class=" col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="allproduct-img">
+                <img src="images/ht1.png" class="w-100">
+              </div>
+              <div class="text-center">
+                <p class="text-capitalize my-1">HOME THEATRE</p>
+                <span class="fw-bold">Rs. 00.00</span>
+              </div>
+            </a>
+          </div>
+          <div class=" col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div class="allproduct-img">
+                <img src="images/ca1.png" class="w-100">
+              </div>
+              <div class="text-center"><br>
+                <p class="text-capitalize my-1">DIGITAL CAMERAs</p>
+                <span class="fw-bold">Rs. 00.00</span>
+              </div>
+            </a>
+          </div>
+          <div class=" col-md-6 col-lg-4 col-xl-3 p-2 new">
+              <div class="allproduct-img">
+                <img src="images/mob2.png" class="w-100">
+                <br>
+                <br>
+              </div>
+
+              <div class="text-center">
+                <p class="text-capitalize my-1">SMART PHONES</p>
+                <span class="fw-bold">Rs. 00.00</span>
+              </div>
+            </a>
+          </div>
+          <div class=" col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="allproduct-img">
+                <img src="images/refri1.png" class="w-100">
+              </div>
+              <div class="text-center"><br><br>
+                <p class="text-capitalize my-1">REFRIGERATORS</p>
+                <span class="fw-bold">Rs. 00.00</span>
+              </div>
+            </a>
+          </div>
+          <div class=" col-md-6 col-lg-4 col-xl-3 p-2 feat">
+            <div class="allproduct-img">
+                <img src="images/c1.png" class="w-100">
+            </div>
+            <div class="text-center"><br>
+              <p class="text-capitalize my-1">AIR COOLERS</p>
+              <span class="fw-bold">Rs. 00.00</span>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end of all products-->
+
+  <!--kitchen appliances-->
+  <section id="kitchen" class="py-5">
+    <div class="container">
+      <div class="title text-center py-5">
+        <h2 class="position-relative d-inline-block">KITCHEN APPLIANCES</h2>
+      </div>
+
+      <div class="kitchen-list row g-0">
+        <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="kitchen-img position-relative overflow-hidden">
+              <img src="images/induc1.jpg" class="w-100">
+              <span class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+              </span>
+            </div>
+            <div class="text-center">
+              <p class="text-capitalize mt-3 mb-1">INDUCTION COOKTOPS</p>
+              <span class="fw-bold d-block">Rs. 00.00</span>
+              <a href="#" class="btn btn-primary mt-3">Add to cart</a>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="kitchen-img position-relative overflow-hidden">
+              <img src="images/r3.png" class="w-100">
+              <span class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+              </span>
+            </div>
+            <div class="text-center">
+              <p class="text-capitalize mt-3 mb-1">REFRIGERATORS</p>
+              <span class="fw-bold d-block">Rs. 00.00</span>
+              <a href="#" class="btn btn-primary mt-3">Add to cart</a>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="kitchen-img position-relative overflow-hidden">
+              <img src="images/oven2.png" class="w-100">
+              <span class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+              </span>
+            </div>
+            <div class="text-center"><br><br><br>
+              <p class="text-capitalize mt-3 mb-1">MICROWAVE OVENS</p>
+              <span class="fw-bold d-block">Rs. 00.00</span>
+              <a href="#" class="btn btn-primary mt-3">Add to cart</a>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="kitchen-img position-relative overflow-hidden">
+              <img src="images/juicer1.jpg" class="w-100">
+              <span class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+              </span>
+            </div>
+            <div class="text-center">
+              <p class="text-capitalize mt-3 mb-1">JUICERS</p>
+              <span class="fw-bold d-block">Rs. 00.00</span>
+              <a href="#" class="btn btn-primary mt-3">Add to cart</a>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--end of kitchen appliances-->
+
+
+  <!--offers-->
+  <section id="offers" class="py-5">
+    <div class="container">
+      <div
+        class="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+        <div class="offers-content">
+          <span class="text-white"> Discount Up To 40%</span>
+          <h2 class="mt-2 mb-4 text-white">Grand Sale Offer!</h2>
+          <a href=# class="btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end of offers-->
+
+  <!--home appliances-->
+  <section id="home" class="py-5">
+    <div class="container">
+      <div class="title text-center py-5">
+        <h2 class="position-relative d-inline-block">HOME APPLIANCES</h2>
+      </div>
+
+      <div class="kitchen-list row g-0">
+        <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="home-img position-relative overflow-hidden">
+              <img src="images/fan1.jpg" class="w-100">
+              <span class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+              </span>
+            </div>
+            <div class="text-center"><br><br>
+              <p class="text-capitalize mt-3 mb-1">FANS</p>
+              <span class="fw-bold d-block">Rs. 00.00</span>
+              <a href="#" class="btn btn-primary mt-3">Add to cart</a>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="kitchen-img position-relative overflow-hidden">
+              <img src="images/iron1.jpg" class="w-100">
+              <span class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+              </span>
+            </div>
+            <div class="text-center">
+              <p class="text-capitalize mt-3 mb-1">IRON</p>
+              <span class="fw-bold d-block">Rs. 00.00</span>
+              <a href="#" class="btn btn-primary mt-3">Add to cart</a>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="kitchen-img position-relative overflow-hidden">
+              <img src="images/lcd3.png" class="w-100">
+              <span class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+              </span>
+            </div>
+            <div class="text-center">
+              <p class="text-capitalize mt-3 mb-1">LED TVs</p>
+              <span class="fw-bold d-block">Rs. 00.00</span>
+              <a href="#" class="btn btn-primary mt-3">Add to cart</a>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="kitchen-img position-relative overflow-hidden">
+              <img src="images/ht1.png" class="w-100">
+              <span class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+              </span>
+            </div>
+            <div class="text-center">
+              <p class="text-capitalize mt-3 mb-1">HOME THEATRES</p>
+              <span class="fw-bold d-block">Rs. 00.00</span>
+              <a href="#" class="btn btn-primary mt-3">Add to cart</a>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end of home appliances-->
+
+  <!--offerss-->
+  <section id="offerss" class="py-5">
+    <div class="container">
+      <div
+        class="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+        <div class="offerss-content">
+          <span class="text-white"> Discount Up To 60%</span>
+          <h2 class="mt-2 mb-4 text-white">Grand Sale !</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end of offerss-->
+
+
+  <!--about us-->
+  <section id="about" class="py-5">
+    <div class="comtainer">
+      <div class="row gy-lg-5 align-items-center">
+        <div class="col-lg-6 order-lg-1">
+          <div class="title pt-3 pb-5 text-center text-lg-start">
+            <h2 class="position-relative d-inline-block ms-4">ABOUT US</h2>
+          </div>
+          <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque doloribus consequatur saepe repudiandae ullam! Magni earum adipisci facere labore consequuntur.</p>
+        </div>
+        <div class="col-lg-6 order-lg-0">
+          <img src="images/about.png" alt="" class="img-fluid" width="50%">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end of about us-->
+
+  
+
+  <!--footer-->
+  <footer class="bg-dark py-5">
+    <div class="container">
+      <div class="row text-white g-4">
+        <div class="col-md-6 col-lg-3">
+          <a class="text-uppercase text-decoration-none brand text-white" href="first.html">E-Shopping Shop</a>
+          <p class="text-white text-muted mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eius quis commodi nihil, fugit, explicabo</p>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-light">Links</h5>
+          <ul class="">
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>Home
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>Products
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>Kitchen Appliances
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>Category
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>Top Brands
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>About
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-light mb-3">Contact </h5>
+          <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+            <span class="">
+              <i class="fas fa-map-marked-alt"></i>
+            </span>
+            <span class="fw-light">
+              Burhanpur 450-331,Madhya-Pradesh
+            </span>
+          </div>
+          <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+            <span class="">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="fw-light">
+              shahnshah.support@gmail.com
+            </span>
+          </div>
+          <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+            <span class="">
+              <i class="fas fa-phone-alt"></i>
+            </span>
+            <span class="fw-light">
+              +9978 7654 236
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-light mb-3">Follow Us</h5>
+          <div class="d-flex">
+            <ul class="list-unstyled d-flex">
+              <li>
+                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                  <i class="fa fa-pinterest"></i>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--end of footer-->
+
+
+
+  <!--jquery-->
+  <script src="jquery-3.6.0.js"></script>
+  <!--isotope js-->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+  <!--bootstrap js-->
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <!--custom js-->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
